@@ -20,14 +20,19 @@ module.exports = {
         test: /\.js$/,
         use: [{
           loader: "babel-loader",
-          options: { presets: ["es2015"] }
         }],
       },
       {
         test: /\.css$/,
         use: [
           "style-loader",
-          { loader: "css-loader", options: { modules: true } }
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: true,
+            },
+          },
         ],
       },
     ],
