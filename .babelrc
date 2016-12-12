@@ -1,1 +1,7 @@
-{ "presets" : ["latest", "stage-3", "react"] }
+{
+	"presets": [
+		["latest", { "modules": false }],
+		"stage-3",
+		"react"
+		]
+}
