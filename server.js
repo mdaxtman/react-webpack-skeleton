@@ -1,11 +1,12 @@
-var webpack = require("webpack");
-var webpackDevServer = require("webpack-dev-server");
-var config = require("./webpack.development.config.js");
-var path = require("path");
+import webpack from "webpack";
+import webpackDevServer from "webpack-dev-server";
+import config from "./webpack.development.config.js";
+import path from "path";
+import express from "express";
 
-var compiler = webpack(config);
+const compiler = webpack(config);
 
-var server = new webpackDevServer(compiler, {
+const server = new webpackDevServer(compiler, {
   filename: config.output.filename,
   contentBase: "public",
   hot: true,
@@ -14,5 +15,4 @@ var server = new webpackDevServer(compiler, {
   }
 });
 
-server.listen(8080, "localhost", function() {})
-
+server.listen(8080, "localhost", () => {});

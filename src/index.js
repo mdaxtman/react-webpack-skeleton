@@ -1,5 +1,10 @@
+import ReactDOM from "react-dom";
+import React from "react";
+import Blah from "./blah.js";
+
 const rootEl = document.getElementById('root');
-rootEl.innerHTML = "<h1>aaa</h1>";
+
+ReactDOM.render(<Blah/>, rootEl);
 
 if (module.hot) {
   module.hot.accept();

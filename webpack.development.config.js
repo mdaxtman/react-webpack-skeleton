@@ -1,7 +1,7 @@
-var path = require("path");
-var webpack = require("webpack");
+import path from "path";
+import webpack from "webpack";
 
-module.exports = {
+export default {
 	context: path.join(__dirname, "src"),
 	entry: [
     "./index.js",
@@ -10,7 +10,8 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, "public/"),
-    filename: "app.bundle.js"
+    filename: "app.bundle.js",
+    publicPath: "/"
   },
   devtool: "source-map",
   module: {
@@ -49,6 +50,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ]
 }
