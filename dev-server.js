@@ -15,4 +15,6 @@ const server = new webpackDevServer(compiler, {
   }
 });
 
-server.listen(8080, "localhost", () => {});
+server.listen(8080, "localhost", () => {
+  console.log("webpack development server is listening on http://localhost:8080");
+});

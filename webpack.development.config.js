@@ -1,5 +1,7 @@
 import path from "path";
 import webpack from "webpack";
+import BellOnBundlerErrorPlugin from "bell-on-bundler-error-plugin";
+import WebpackBrowserPlugin from "webpack-browser-plugin";
 
 export default {
 	context: path.join(__dirname, "src"),
@@ -9,7 +11,7 @@ export default {
     "webpack-dev-server/client?http://localhost:8080"
   ],
   output: {
-    path: path.resolve(__dirname, "public/"),
+    path: path.join(__dirname, "public"),
     filename: "app.bundle.js",
     publicPath: "/"
   },
@@ -51,6 +53,8 @@ export default {
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new BellOnBundlerErrorPlugin(),
+    new WebpackBrowserPlugin()
   ]
 }

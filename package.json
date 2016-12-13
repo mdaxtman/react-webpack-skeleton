@@ -29,8 +29,8 @@
   },
   "scripts": {
     "test": "",
-    "dev": "node -r babel-register server.js",
-    "build": "webpack"
+    "dev": "node -r babel-register dev-server.js",
+    "build": "node -r babel-register webpack -config webpack.production.config.js"
   },
   "author": "Mike Axtman",
   "license": "ISC"

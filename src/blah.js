@@ -3,6 +3,6 @@ import styles from './blah.css';
 
 export default class Blah extends Component {
   render() {
-    return ( <h1 className={styles.abc}>hello There reload!</h1>)
+    return ( <h1 className={styles.abc}> reload!</h1>)
   }
 }
