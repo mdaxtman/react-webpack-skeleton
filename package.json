@@ -9,6 +9,7 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.4",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.8",
     "babel-preset-latest": "^6.16.0",
@@ -17,7 +18,9 @@
     "babel-register": "^6.18.0",
     "bell-on-bundler-error-plugin": "^1.0.8",
     "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
     "image-webpack-loader": "^3.1.0",
     "postcss-loader": "^1.2.0",
     "raw-loader": "^0.5.1",
@@ -30,7 +33,7 @@
   "scripts": {
     "test": "",
     "dev": "node -r babel-register dev-server.js",
-    "build": "node -r babel-register webpack -config webpack.production.config.js"
+    "build": "webpack --config webpack.production.config.js"
   },
   "author": "Mike Axtman",
   "license": "ISC"
