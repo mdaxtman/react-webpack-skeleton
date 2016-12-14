@@ -8,7 +8,7 @@ const compiler = webpack(config);
 
 const server = new webpackDevServer(compiler, {
   filename: config.output.filename,
-  contentBase: "public",
+  contentBase: "src",
   hot: true,
   stats: {
     colors: true

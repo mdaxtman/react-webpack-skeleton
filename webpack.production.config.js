@@ -7,9 +7,8 @@ module.exports = {
   context: path.join(__dirname, "src"),
   entry: "./index.js",
   output: {
-    path: path.resolve(__dirname, "public/"),
+    path: path.join(__dirname, "public"),
     filename: "app.bundle.js",
-    publicPath: "/",
   },
   module: {
     loaders: [
@@ -50,8 +49,9 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin("styles.css"),
     new HtmlWebpackPlugin({
-      template: "index.template.html",
-      inject: "body"
-    })
+      template: "index.html",
+      inject: "body",
+      cache: true,
+    }),
   ],
 }
