@@ -5,21 +5,21 @@ import WebpackBrowserPlugin from "webpack-browser-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
-	context: path.join(__dirname, "src"),
-	entry: [
-    "./index.js",
+  context: path.join(__dirname, "src"),
+  entry: [
+    "./index.jsx",
     "webpack/hot/dev-server",
     "webpack-dev-server/client?http://localhost:8080"
   ],
   output: {
     path: path.join(__dirname, "public"),
-    filename: "app.bundle.js",
+    filename: "app.bundle.js"
   },
   devtool: "source-map",
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loaders: ["babel-loader"],
         exclude: /node_modules/
       },
@@ -34,12 +34,12 @@ export default {
       },
       {
         test: /\.json$/,
-        loaders: ["json-loader"], 
+        loaders: ["json-loader"],
         exclude: /node_modules/
       },
       {
         test: /\.(woff|woff2|eot|ttf|png|jpg|gif)$/,
-        loaders: ["url-loader?name=[path][name].[ext]&limit=10000"], 
+        loaders: ["url-loader?name=[path][name].[ext]&limit=10000"],
         exclude: /node_modules/
       },
       {
@@ -48,8 +48,11 @@ export default {
           "raw-loader",
           "image-webpack-loader"
         ]
-      },
+      }
     ]
+  },
+  resolve: {
+    extensions: [".webpack.js", ".web.js", ".js", ".jsx"]
   },
   plugins: [
     new webpack.NamedModulesPlugin(),
@@ -59,6 +62,6 @@ export default {
     new HtmlWebpackPlugin({
       template: "index.html",
       inject: "body"
-    }),
+    })
   ]
-}
+};
