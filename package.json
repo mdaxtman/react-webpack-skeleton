@@ -11,7 +11,7 @@
     "autoprefixer": "^6.5.4",
     "babel-core": "^6.18.2",
     "babel-eslint": "^6.1.2",
-    "babel-loader": "^6.2.8",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.16.0",
     "babel-register": "^6.18.0",
@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
-    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "image-webpack-loader": "^3.1.0",
@@ -31,9 +31,9 @@
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.25",
+    "webpack": "^3.10.0",
     "webpack-browser-plugin": "^1.0.16",
-    "webpack-dev-server": "^2.1.0-beta.10"
+    "webpack-dev-server": "^2.9.7"
   },
   "scripts": {
     "test": "echo no test environment set up",
