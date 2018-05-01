@@ -4,8 +4,8 @@
   "description": "basic scaffold for react app with babel and webpack without the extra cruft of create-react-app",
   "main": "webpack.config.js",
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
